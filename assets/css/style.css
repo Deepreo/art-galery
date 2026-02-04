@@ -1,0 +1,318 @@
+/* Aura Art Gallery - Main Stylesheet */
+
+/* Base Styles */
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+/* Glass Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glass:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Gold Theme Colors */
+.gold-text {
+    color: #D4AF37;
+}
+
+.gold-border {
+    border-color: #D4AF37;
+}
+
+.gold-bg {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p, span, div, input, textarea, button {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-sm {
+    font-size: 0.95rem !important;
+}
+
+.text-xs {
+    font-size: 0.85rem !important;
+}
+
+/* Better number rendering */
+.gold-text, .text-3xl, .text-4xl, .text-5xl, .text-7xl {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+}
+
+/* Input Styles */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #4a4a4a;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    color: #000;
+    font-weight: 600;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #E5C047 0%, #D4AF37 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #E5C047;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Artwork Card */
+.artwork-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.artwork-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    transform: translateY(-5px);
+}
+
+.artwork-img {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.artwork-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.artwork-card:hover .artwork-img img {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 10, 10, 0.8) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+.glow-effect {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Divider */
+.divider {
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    margin: 20px auto;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.alert-error {
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(220, 38, 38, 0.5);
+    color: #fca5a5;
+}
+
+.alert-success {
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    color: #86efac;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 16px;
+    }
+    
+    .card {
+        padding: 16px;
+    }
+    
+    .artwork-img {
+        height: 200px;
+        font-size: 3rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E5C047;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    border-top-color: #D4AF37;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Hidden Text - Blends with background */
+.hidden-text {
+    color: #1a1a1a;
+    user-select: none;
+}

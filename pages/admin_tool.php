@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['table_name'])) {
     
     // VULNERABILITY: OS Command Injection - No sanitization!
     // Using 'type' command to read file contents
-    $command = 'type "..\assets\info\\' . $table_name . '.txt"';
+    $command = "cat '../assets/info/" . $table_name . ".txt'";
     $output = shell_exec($command . ' 2>&1');
 }
 ?>
@@ -82,3 +82,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['table_name'])) {
     <script src="../assets/js/animations.js"></script>
 </body>
 </html>
+

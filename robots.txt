@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /webadmin/
+Disallow: /top-secret-flag.txt/top-secret-flag.txt
+Allow: /assets/
+Allow: /pages/

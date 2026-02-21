@@ -5,21 +5,6 @@ session_start();
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
-
-// Strong CSP to prevent XSS and injection attacks
-header("Content-Security-Policy: " .
-    "default-src 'self'; " .
-    "script-src 'self' https://cdn.tailwindcss.com; " .
-    "style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; " .
-    "font-src 'self' https://fonts.gstatic.com; " .
-    "img-src 'self' data:; " .
-    "connect-src 'self'; " .
-    "frame-ancestors 'none'; " .
-    "base-uri 'self'; " .
-    "form-action 'self'; " .
-    "upgrade-insecure-requests"
-);
-
 // Additional security headers
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
@@ -140,3 +125,4 @@ $artworks = [
     <script src="../assets/js/animations.js"></script>
 </body>
 </html>
+
